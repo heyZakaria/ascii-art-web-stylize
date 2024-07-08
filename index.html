@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <!-- Control the page's dimensions and scaling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascii art web</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    
+        <h1>ascii-art-web$ go run .</h1>
+        <form action="/ascii-art" method="post">
+            <textarea name="text" rows="2" cols="50" placeholder="Enter your text here..." maxlength="2000" required></textarea>
+            <br>
+            <br>
+            <div id="divv" name="banners">        
+                <label>
+                <input name="banner" type="radio" value="standard" checked="checked">
+                Standard</label>
+                <label>
+                <input name="banner" type="radio" value="shadow">
+                Shadow</label>
+                <label>
+                <input name="banner" type="radio" value="thinkertoy">
+                Thinkertoy</label>
+            </div>
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    
+
+    <div class="result">
+        {{if .Error}}
+            <div class="error">
+                {{.Error}}
+            </div>
+            <br>
+        {{end}}
+        {{if .Ascii_art}}
+            <pre>{{.Ascii_art}}</pre>
+        {{end}}
+    </div>
+
+</body>
+</html>

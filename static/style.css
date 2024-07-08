@@ -1,0 +1,62 @@
+body {
+    background-color: rgb(0, 0, 0);
+} 
+
+.aldrich-regular {
+    font-family: "Aldrich", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+h1 {
+    color: #28C75C;
+    font-family: Aldrich;
+}
+textarea {
+    resize: none;
+    background-color: black;
+    color: #28C75C;
+    font-family: Aldrich;
+    font-size: 35px;
+    border: none;
+    outline: none;
+    
+  }
+
+/* modify scroll bare with pseudo elements */
+  textarea::-webkit-scrollbar {
+    width: 6px; /* Adjust the width as needed */
+  }
+
+  textarea::-webkit-scrollbar-thumb {
+    background-color: #28C75C; /* Change the thumb color */
+  }
+
+  textarea::-webkit-scrollbar-track {
+    background-color: #ffffff; /* Change the track color */
+  }
+
+  div[name="banners"] {
+    color: #28C75C;
+}
+
+input[type="radio"]{
+    appearance: none;
+    
+}
+label:has(>input[type="radio"]:checked){
+    accent-color: red;
+    
+}
+
+label {
+    
+    color: #28C75C;
+    font-family: Aldrich;
+    
+}
+
+label:hover {
+    color: #fefffe;
+    font-family: Aldrich; 
+}
